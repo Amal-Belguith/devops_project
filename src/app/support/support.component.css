@@ -1,0 +1,12 @@
+/* Styles pour les petits écrans comme les téléphones */
+@media screen and (max-width: 767px) {
+    .form-control[type="date"]::before {
+        content: "Sélectionnez une date";
+        color: #646464; /* Couleur du texte de l'espace réservé */
+    }
+
+    .form-control[type="time"]::before {
+        content: "Sélectionnez l'heure";
+        color: #646464; /* Couleur du texte de l'espace réservé */
+    }
+}

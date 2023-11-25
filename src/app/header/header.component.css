@@ -1,0 +1,91 @@
+.row.fixed{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
+.menu{
+ margin-top: 10px; 
+ background-color: #ffffff;
+ 
+}
+.menu ul{
+  padding: 0;
+  margin:0;
+
+}
+
+.menu ul li{
+  list-style-type: none;
+
+  display: inline-block;
+
+  margin-left: 12px;
+
+  text-transform: uppercase;
+
+}
+.menu ul li a{
+  list-style: none;
+  text-decoration: none;
+  color: #000000;
+}
+.menu ul li a:hover{
+  color: #0f0e0e;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+@media(max-width: 999px){
+  .onMobil {
+    font-size: 12px;
+  }
+ 
+  .menu{
+    position: fixed;
+    right: -230px;
+    top: 64px;
+    width: 180px;
+    height: 57%;
+    background: #53c7f1;
+    transition: 0.4s ease-in-out;
+    z-index: 1000; /* Valeur supérieure pour le menu, il sera au-dessus du contenu */
+  }
+.menu ul li {
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 10px 0 10px 26px;
+  border-bottom: 1px solid #ffffff;
+
+}
+.menu_icon {
+  top: -44px;
+  left: auto; /* Supprimez la propriété "right" */
+  right: -70px; /* Ajoutez "right" pour positionner l'icône à droite */
+  z-index: 1000;
+  position: absolute; /* Assurez-vous que la position est "absolute" pour placer l'icône correctement */
+}
+
+.menu_icon span {
+  width: 32px;
+  height: 3px;
+  background: #06A3DA;
+  display: block;
+  transition: 0.2s ease-in-out;
+}
+
+/* Ajustez la marge pour positionner correctement la deuxième ligne de l'icône */
+.menu_icon span:nth-child(2) {
+  margin: 4px 0; /* Ajustez la valeur "4px" comme nécessaire */
+}
+
+
+
+.menuClasse{
+
+right: 0;
+transition: 0.4s ease-in-out;
+
+}
+}

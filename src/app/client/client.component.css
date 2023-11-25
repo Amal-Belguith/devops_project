@@ -1,0 +1,143 @@
+/* Styles pour les grands écrans */
+.testimonial-container {
+    overflow: hidden;
+    width: 1200px; /* Ajustez la largeur du conteneur si nécessaire */
+    margin: 0 auto;
+}
+
+.testimonial-list {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.testimonial-item {
+    flex: 0 0 350px; /* Ajustez la largeur des éléments ici */
+    padding: 20px;
+    margin-right: 20px;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+/* Animation pour les grands écrans */
+@keyframes scroll {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-200px);
+    }
+    50% {
+        transform: translateX(-500px);
+    }
+    75% {
+        transform: translateX(-800px);
+    }
+}
+
+/* Styles pour les petits écrans pour la classe .testimonial */
+@media screen and (max-width: 768px) {
+    .testimonial-item {
+        flex: 0 0 200px; /* Ajustement de la largeur des éléments pour les écrans plus petits */
+    }
+
+    .testimonial-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: scroll 8s linear infinite; /* Animation ajustée pour les petits écrans */
+    }
+
+    /* Animation pour les petits écrans pour la classe .testimonial */
+    @keyframes scroll {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        20% {
+            transform: translateX(-100px); /* Premier quart du défilement */
+        }
+        40% {
+            transform: translateX(-300px); /* Deuxième quart du défilement */
+        }
+        60% {
+            transform: translateX(-500px); /* Troisième quart du défilement */
+        }
+        80% {
+            transform: translateX(-700px); /* Dernier quart du défilement */
+        }
+    }
+}
+
+/* Styles pour la classe .testimoniall */
+.testimoniall-container {
+    overflow: hidden;
+    width: 1200px; /* Ajustez la largeur du conteneur si nécessaire */
+    margin: 0 auto;
+}
+
+.testimoniall-list {
+    display: flex;
+    animation: scroll2 15s linear infinite; /* Animation pour la classe testimoniall sur les grands écrans */
+}
+
+.testimoniall-list img {
+    margin-right: 8px;
+    width: 100px !important;
+    height: 60px !important;
+}
+
+/* Animation pour la classe testimoniall sur les grands écrans */
+@keyframes scroll2 {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100px);
+    }
+    50% {
+        transform: translateX(-300px);
+    }
+    75% {
+        transform: translateX(-400px);
+    }
+}
+
+/* Styles pour les petits écrans pour la classe .testimoniall */
+@media screen and (max-width: 768px) {
+    .testimoniall-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Les mêmes styles que pour la classe .testimonial sur les petits écrans */
+        animation: scroll 8s linear infinite;
+    }
+
+    .testimoniall-list > img {
+        width: calc(25% - 8px);
+        margin: 4px;
+    }
+
+    /* Animation pour les petits écrans pour la classe .testimoniall */
+    @keyframes scroll {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        20% {
+            transform: translateX(-25%);
+        }
+        40% {
+            transform: translateX(-50%);
+        }
+        60% {
+            transform: translateX(-75%);
+        }
+        80% {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+
+
+
+
+
+
+

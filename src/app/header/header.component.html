@@ -1,0 +1,91 @@
+<!-- Navbar & Carousel Start -->
+    <div class="row fixed" >
+        <div class="col-md-3 col-sm-3 col-xs-3 ">
+            <div class="logo">
+                <a href="">
+                    <img src="assets/img/logk.png" alt="Logo" style="max-width: 140px; max-height: 70px;" />
+                </a>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-9 text-end">
+            <div class="menu_icon" [class.menu_iconClass]="menu_icon_variable" (click)="openMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu" [class.menuClasse]="menuVariable">
+                <ul>
+                    <li><a (click)="closeMenu()" href="" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }" class="nav-item nav-link">Accueil</a></li>
+                    <li><a (click)="closeMenu()" routerLink="/About" fragment="about-start" routerLinkActive="active"
+                            class="nav-item nav-link">À propos</a></li>
+                    <li><a (click)="closeMenu()" routerLink="/Services" fragment="services-start"
+                            routerLinkActive="active" class="nav-item nav-link">Services</a></li>
+                    <li><a (click)="closeMenu()" routerLink="/Produits" fragment="produits-start"
+                            routerLinkActive="active" class="nav-item nav-link">Produits</a></li>
+                    <li><a (click)="closeMenu()" routerLink="/Support" fragment="support-start"
+                            routerLinkActive="active" class="nav-item nav-link">Support</a></li>
+                    <li><a (click)="closeMenu()" routerLink="/Client" fragment="client-start"
+                            routerLinkActive="active" class="nav-item nav-link">Nos Réferences</a></li>
+                    <li><a (click)="closeMenu()" routerLink="/Contact" fragment="contact-start"
+                            routerLinkActive="active" class="nav-item nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" >
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="assets/img/accueil2.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Service & Consultation</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Gestion Informatique et Technologies
+                        </h1>
+                        <a routerLink="/Devis" fragment="devis-start" 
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft onMobil" >Demander un Devis</a>
+                        <a routerLink="/Contact" fragment="contact-start"
+                            class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight onMobil">Contactez-nous</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="assets/img/resa6.png" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Sécurités & Réseaux</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Nos solutions servent vos besoins</h1>
+                        <a routerLink="/Devis" fragment="devis-start"
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft onMobil">Demander un Devis</a>
+                        <a routerLink="/Contact" fragment="contact-start"
+                            class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight onMobil">Contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="assets/img/m1.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px; ">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Maintenance & Systèmes </h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Expertise en maintenance solide</h1>
+                        <a routerLink="/Devis" fragment="devis-start"
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft onMobil">Demander un Devis</a>
+                        <a routerLink="/Contact" fragment="contact-start"
+                            class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight onMobil">Contactez-nous</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<!-- Navbar & Carousel End -->
+
+

@@ -1,0 +1,37 @@
+/* Styles par défaut pour les boutons */
+.btn-description {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 30px; /* Ajustez cette valeur pour l'espace souhaité entre les boutons */
+    background-color: #51afe1;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+    margin-top: 5px;
+}
+
+.btn-description:hover {
+    transform: scale(1); /* Réinitialiser l'échelle au survol */
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+    .position-absolute.start-50.translate-middle-x.text-center.text-white {
+        font-size: 14px;
+        bottom: auto; /* Remove the bottom positioning for buttons */
+        top: 59%; /* Position buttons below the image */
+        transform: translate(-50%, 0); /* Adjust the vertical alignment */
+    }
+
+    .btn-description {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-top: 5px; /* Adjust the top margin for spacing */
+    }
+}
+
