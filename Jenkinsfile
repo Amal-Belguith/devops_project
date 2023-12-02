@@ -8,14 +8,7 @@ pipeline {
             }
         }
 
-        stage('Build Node Project') {
-            steps {
-                script {
-                    sh 'npm install'
-                    sh 'npm run build'
-                }
-            }
-        }
+        
 
         stage('Build Docker Image') {
             steps {
