@@ -8,11 +8,27 @@ pipeline {
             }
         }
 
-        stage('Build and Push Docker Image') {
+        stage('Build Node Project') {
             steps {
                 script {
-                    dockerImage = docker.build("dockerimg")
-                    docker.withRegistry('https://registry.example.com', 'registry-credentials') {
+                    sh 'npm install'
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    def dockerImage = docker.build("amalbelguith0/dockerimg:${env.BUILD_ID}")
+                }
+            }
+        }
+
+        stage('Push Docker Image to DockerHub') {
+            steps {
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'registry-credentials') {
                         dockerImage.push()
                     }
                 }
@@ -22,9 +38,18 @@ pipeline {
         stage('Deploy to Docker') {
             steps {
                 script {
-                    sh 'docker run -p 8080:80 dockerimg'
+                    sh 'docker run -p 8080:80 amalbelguith0/dockerimg:${env.BUILD_ID}'
                 }
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline succeeded!'
+        }
+        failure {
+            echo 'Pipeline failed!'
         }
     }
 }
