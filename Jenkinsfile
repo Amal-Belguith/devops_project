@@ -1,5 +1,4 @@
 pipeline {
-  
     agent any
 
     stages {
@@ -22,9 +21,8 @@ pipeline {
         stage('Push Docker Image to DockerHub') {
             steps {
                 script {
-                    withDockerRegistry([credentialsId: 'registry-credentials', url: 'https://registry.hub.docker.com']) {
-                        // Your Docker push commands here
-                        sh 'docker push amalbelguith0/dockerimg:latest'
+                    docker.withRegistry('https://registry.hub.docker.com', 'registry-credentials') {
+                        dockerImage.push()
                     }
                 }
             }
