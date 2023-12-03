@@ -14,7 +14,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                       dockerImage = docker.build("amalbelguith0/dockerimg:${env.BUILD_ID}")
+                    dockerImage = docker.build("amalbelguith0/dockerimg:${env.BUILD_ID}")
                 }
             }
         }
@@ -32,7 +32,8 @@ pipeline {
         stage('Deploy to Docker') {
             steps {
                 script {
-                    sh 'docker run -p 8080:80 amalbelguith0/dockerimg:${env.BUILD_ID}'
+                    sh "docker run -p 8084:80 amalbelguith0/dockerimg:${env.BUILD_ID}"
+
                 }
             }
         }
