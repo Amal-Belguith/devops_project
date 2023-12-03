@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy to Docker') {
             steps {
                 script {
-                    sh "docker run -p 8084:80 amalbelguith0/dockerimg:${env.BUILD_ID}"
+                    sh "docker run -p 8080:80 amalbelguith0/dockerimg:${env.BUILD_ID}"
 
                 }
             }
