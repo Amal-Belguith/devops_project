@@ -18,3 +18,8 @@ COPY . .
 
 # Construisez l'application Angular en mode de production
 RUN ng build --configuration=production
+
+
+# Utilisez un serveur web léger pour servir l'application construite
+FROM nginx:alpine
+COPY --from=0 /app/dist/ /usr/share/nginx/html
